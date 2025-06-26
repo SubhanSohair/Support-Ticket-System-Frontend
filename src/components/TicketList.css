@@ -1,0 +1,115 @@
+.ticket-list-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.filter-buttons {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-buttons button {
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  color: white;
+  min-width: 100px;
+}
+
+.filter-buttons button:nth-child(1) {
+  background-color: #6c757d; /* ALL - gray */
+}
+
+.filter-buttons button:nth-child(2) {
+  background-color: #4caf50; /* OPEN - green */
+}
+
+.filter-buttons button:nth-child(3) {
+  background-color: #2196f3; /* IN PROGRESS - blue */
+}
+
+.filter-buttons button:nth-child(4) {
+  background-color: #ffb300; /* CLOSED - yellow */
+}
+
+.filter-buttons button.active {
+  outline: 2px solid white;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+}
+
+.ticket-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.ticket-card {
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+  text-align: left;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  background-color: #ffffff; /* default bg, will be overridden inline */
+}
+
+.ticket-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.ticket-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #1e1e1e;
+}
+
+.ticket-card p {
+  font-size: 15px;
+  margin: 6px 0;
+  color: #444;
+}
+
+.ticket-card p strong {
+  color: #111;
+}
+
+.ticket-meta {
+  font-size: 13px;
+  color: #444;
+  font-weight: bold; /* ✅ Make created bold */
+  margin-bottom: 10px;
+}
+
+.ticket-meta-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.status-badge {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  color: white;
+  display: inline-block;
+}
+
+.assigned-label {
+  color: #222; /* ✅ More visible */
+  font-weight: bold;
+}
